@@ -1,0 +1,13 @@
+.title {
+    font-weight: 700;
+}
+.col{
+    text-align: left;
+}
+
+.carouselCaption {
+    background-color: #0a466f;
+    height: 150px;
+    padding: 18px;
+    color: white;
+}
