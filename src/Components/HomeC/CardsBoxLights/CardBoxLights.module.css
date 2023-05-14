@@ -1,0 +1,33 @@
+.wrapper {
+    margin-top: 70px;
+    padding-bottom: 120px;
+}
+
+.title {
+    padding: 12px 0 16px 0;
+    color: #F7941D;
+    font-size: 18px;
+    font-weight: 700;
+    
+    
+}
+
+.title:hover  {
+    color: #0a466f;
+    cursor: pointer;
+}
+
+.card {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.images {
+    transition: transform 0.3s ease-in-out;
+   
+  }
+  
+.images:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }

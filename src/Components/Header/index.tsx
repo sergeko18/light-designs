@@ -2,13 +2,13 @@ import React from "react";
 import { Nav, Navbar, Button, Container, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo/logo.svg";
-import style from "./Heafer.module.css";
+import style from "./Header.module.css";
 
 const Header: React.FC = () => {
   return (
-    <div>
+    <div className={style.wrapper}>
       <Navbar
-        className={style.navbar}
+        className={style.headeNavbar}
         collapseOnSelect
         expand="lg"
         variant="dark"
