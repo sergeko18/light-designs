@@ -7,3 +7,7 @@
 .App {
     font-family: 'Montserrat', sans-serif;
 }
+
+.carousel-indicators {
+	display: none !important;
+}

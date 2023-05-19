@@ -54,7 +54,7 @@ function CarouselBox() {
     },
   ];
 
-  if (windowWidth > 575) {
+  if (windowWidth > 767) {
     return (
       <Carousel className={styles.wrapper}>
         {slideData.map((slide) => {
