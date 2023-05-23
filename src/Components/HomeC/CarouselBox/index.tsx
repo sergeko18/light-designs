@@ -8,15 +8,7 @@ import img4 from "../../../assets/img/carusel/image4.jpg";
 import img5 from "../../../assets/img/carusel/image5.jpg";
 import { Col, Row } from "react-bootstrap";
 
-function CarouselBox() {
-  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
-
-  React.useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+function CarouselBox({ windowWidth }: any) {
   const slideData = [
     {
       id: 1,

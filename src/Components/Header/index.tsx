@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "./Header.module.css";
 import logo from "../../assets/img/logo/logo.svg";
+import ProductMenu from "./ProductMenu";
 
-const Header = () => {
+const Header = ({ windowWidth }: any) => {
   const [isActive, setIsActive] = React.useState(false);
+  const [isProductMenuActive, setIsProductMenuActive] = React.useState(false);
 
   const handleClick = () => {
     setIsActive(!isActive);
@@ -12,6 +14,20 @@ const Header = () => {
     } else {
       document.body.classList.add("_lock");
     }
+    if (isProductMenuActive) {
+      setIsProductMenuActive(false);
+    }
+  };
+
+  const handleProdClick = () => {
+    if (windowWidth > 767) {
+      if (document.body.classList.contains("_lock")) {
+        document.body.classList.remove("_lock");
+      } else {
+        document.body.classList.add("_lock");
+      }
+    }
+    setIsProductMenuActive(!isProductMenuActive);
   };
 
   return (
@@ -36,24 +52,21 @@ const Header = () => {
           >
             <ul className={styles.menu__list}>
               <li>
-                <a href="/" className={styles.menu__link}>
+                <span className={styles.menu__link} onClick={handleProdClick}>
                   ТОВАРИ
-                </a>
+                </span>
               </li>
               <li>
-                <a href="/" className={styles.menu__link}>
-                  ЗАСТОСУВАННЯ
-                </a>
+                <span className={styles.menu__link}>ЗАСТОСУВАННЯ</span>
               </li>
               <li>
-                <a href="/" className={styles.menu__link}>
-                  ПЕРЕВАГИ
-                </a>
+                <span className={styles.menu__link}>ПЕРЕВАГИ</span>
               </li>
             </ul>
           </nav>
         </div>
       </div>
+      <ProductMenu isActive={isProductMenuActive} />
     </header>
   );
 };

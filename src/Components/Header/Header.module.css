@@ -40,6 +40,7 @@
 
 .menu__link:hover {
     color: #f7941d;
+    cursor: pointer;
 } 
 
 .menu__icon {
@@ -163,5 +164,7 @@
         font-weight: 700;
     }
 }
+
+
 
 
