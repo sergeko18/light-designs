@@ -11,6 +11,7 @@
 
 .dContainer:hover {
     background-color: #F7941D;
+    cursor: pointer;
 }
 
 .dImg {

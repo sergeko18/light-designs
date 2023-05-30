@@ -35,7 +35,7 @@ function CardsBoxLights() {
       <Row>
         {CardsBoxLightsData.map((card) => {
           return (
-            <Col>
+            <Col key={card.id}>
               <Card
                 className={styles.card}
                 style={{ width: "20rem", border: "none" }}
@@ -49,9 +49,7 @@ function CardsBoxLights() {
                   <Card.Title>
                     <h6 className={styles.title}>{card.title}</h6>
                   </Card.Title>
-                  <Card.Text>
-                    <p>{card.subtitle}</p>
-                  </Card.Text>
+                  <Card.Text>{card.subtitle}</Card.Text>
                 </Card.Body>
               </Card>
             </Col>

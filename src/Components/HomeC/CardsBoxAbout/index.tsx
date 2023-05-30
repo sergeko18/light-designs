@@ -43,7 +43,7 @@ function CardsBoxAbout() {
       <Row>
         {CardsBoxAboutData.map((cards) => {
           return (
-            <Col>
+            <Col key={cards.id}>
               <Card
                 className={styles.card}
                 style={{ width: "20rem", border: "none" }}
@@ -57,9 +57,7 @@ function CardsBoxAbout() {
                   <Card.Title>
                     <h6 className={styles.title}>{cards.title}</h6>
                   </Card.Title>
-                  <Card.Text>
-                    <p>{cards.subtitle}</p>
-                  </Card.Text>
+                  <Card.Text>{cards.subtitle}</Card.Text>
                 </Card.Body>
               </Card>
             </Col>

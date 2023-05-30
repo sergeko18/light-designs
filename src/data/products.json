@@ -1,0 +1,104 @@
+[
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "1",
+    "name": "CLM60 Серія",
+    "category_ids": [11]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "2",
+    "name": "ILB Серія",
+    "category_ids": [12]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "3",
+    "name": "LU Серія",
+    "category_ids": [13, 14, 22, 25]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "4",
+    "name": "IL280 Серія",
+    "category_ids": [13, 21, 22, 25, 28]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "5",
+    "name": "IL3525 Series",
+    "category_ids": [13, 21, 22, 25, 26, 28]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "6",
+    "name": "IL450 Серія",
+    "category_ids": [13, 21, 26, 29, 210]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "7",
+    "name": "RWBE40 Серія",
+    "category_ids": [23]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "8",
+    "name": "RWL3525 Серія",
+    "category_ids": [23, 24]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "9",
+    "name": "RWLII Серія",
+    "category_ids": [23, 24]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "10",
+    "name": "RWL600 Серія",
+    "category_ids": [23, 24]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "11",
+    "name": "LX Серія",
+    "category_ids": [27, 31, 32]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "12",
+    "name": "ILX3525 Серія",
+    "category_ids": [27, 31, 32, 33]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "13",
+    "name": "ILX450 Серія",
+    "category_ids": [27, 31, 32, 33]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "14",
+    "name": "ILX5530 Серія",
+    "category_ids": [32, 34]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "14",
+    "name": "CB Серія",
+    "category_ids": [12, 24]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "15",
+    "name": "ILX280 Серія",
+    "category_ids": [31, 33]
+  },
+  {
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png",
+    "id": "16",
+    "name": "RWX600 Серія",
+    "category_ids": [34]
+  }
+]

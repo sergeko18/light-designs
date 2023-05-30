@@ -1,6 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
-import ico from "../../../assets/icons/catalog.png";
+import ico from "../../assets/icons/catalog.png";
 import styles from "./Divider.module.css";
 
 const Divider = () => {

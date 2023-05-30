@@ -2,8 +2,11 @@ import React from "react";
 import styles from "./Header.module.css";
 import logo from "../../assets/img/logo/logo.svg";
 import ProductMenu from "./ProductMenu";
+import { Link } from "react-router-dom";
 
-const Header = ({ windowWidth }: any) => {
+type HeaderPropsType = { windowWidth: number; setSubcategoryName: Function };
+
+const Header = ({ windowWidth, setSubcategoryName }: HeaderPropsType) => {
   const [isActive, setIsActive] = React.useState(false);
   const [isProductMenuActive, setIsProductMenuActive] = React.useState(false);
 
@@ -28,14 +31,23 @@ const Header = ({ windowWidth }: any) => {
       }
     }
     setIsProductMenuActive(!isProductMenuActive);
+    setIsActive(false);
+  };
+
+  const handleLogoClick = () => {
+    if (document.body.classList.contains("_lock")) {
+      document.body.classList.remove("_lock");
+    }
+    setIsProductMenuActive(false);
+    setIsActive(false);
   };
 
   return (
     <header className={styles.header}>
       <div className={styles.header__container}>
-        <a href="/" className={styles.header__logo}>
-          <img src={logo} alt="Logo" />
-        </a>
+        <Link to="/" className={styles.header__logo}>
+          <img onClick={handleLogoClick} src={logo} alt="Logo" />
+        </Link>
         <div className={styles.header__menu}>
           <div
             className={`${styles.menu__icon} ${
@@ -66,7 +78,11 @@ const Header = ({ windowWidth }: any) => {
           </nav>
         </div>
       </div>
-      <ProductMenu isActive={isProductMenuActive} />
+      <ProductMenu
+        onHandleClick={handleLogoClick}
+        isActive={isProductMenuActive}
+        setSubcategoryName={setSubcategoryName}
+      />
     </header>
   );
 };

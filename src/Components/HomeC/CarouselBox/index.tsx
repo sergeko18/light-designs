@@ -51,7 +51,7 @@ function CarouselBox({ windowWidth }: any) {
       <Carousel className={styles.wrapper}>
         {slideData.map((slide) => {
           return (
-            <Carousel.Item>
+            <Carousel.Item key={slide.id}>
               <img
                 className="d-block w-100"
                 src={slide.img}
@@ -76,7 +76,7 @@ function CarouselBox({ windowWidth }: any) {
         <Carousel className={styles.wrapper}>
           {slideData.map((slide) => {
             return (
-              <Carousel.Item>
+              <Carousel.Item key={slide.id}>
                 <img
                   className="d-block w-100"
                   src={slide.img}

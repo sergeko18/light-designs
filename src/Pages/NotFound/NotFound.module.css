@@ -1,0 +1,16 @@
+.notFound {
+    padding-top: 133px;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+.notFound__text {
+    text-align: center;
+    font-size: 52px;
+    font-weight: 700;
+    color: #0a466f;
+}
+
