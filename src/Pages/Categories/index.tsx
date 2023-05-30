@@ -14,6 +14,7 @@ type propsCategoriesTypes = {
 };
 
 const Categories: React.FC<propsCategoriesTypes> = (props) => {
+  window.scrollTo(0, 0);
   const navigate = useNavigate();
 
   let { id } = useParams();

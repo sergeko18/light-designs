@@ -3,6 +3,7 @@ import styles from "./NotFound.module.css";
 import Divider from "../../Components/Divider";
 
 const NotFound = () => {
+  window.scrollTo(0, 0);
   return (
     <>
       <div className={styles.notFound}>

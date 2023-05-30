@@ -7,6 +7,7 @@ import CardBoxLights from "../Components/HomeC/CardsBoxLights";
 type HomePropsType = { windowWidth: number };
 
 const Home = ({ windowWidth }: HomePropsType) => {
+  window.scrollTo(0, 0);
   return (
     <div>
       <CarouselBox windowWidth={windowWidth} />

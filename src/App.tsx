@@ -59,8 +59,6 @@ function App() {
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      {/* <Home windowWidth={windowWidth} /> */}
-      {/* <Categories /> */}
       <Footer />
     </div>
   );

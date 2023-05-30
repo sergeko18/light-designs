@@ -13,6 +13,7 @@ type SubcategoryPropsTypes = {
 };
 
 const Subcategory: React.FC<SubcategoryPropsTypes> = (props) => {
+  window.scrollTo(0, 0);
   const [products, setProducts] = React.useState<
     [
       {
@@ -20,6 +21,7 @@ const Subcategory: React.FC<SubcategoryPropsTypes> = (props) => {
         category_ids: number[];
         name: string;
         imageURL: string;
+        info: string;
       }
     ]
   >([
@@ -28,6 +30,7 @@ const Subcategory: React.FC<SubcategoryPropsTypes> = (props) => {
       category_ids: [],
       name: "Loading",
       imageURL: "",
+      info: "",
     },
   ]);
 
@@ -78,11 +81,7 @@ const Subcategory: React.FC<SubcategoryPropsTypes> = (props) => {
                           {item.name}
                         </h4>
                         <p className={styles.container__col2_txt}>
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Voluptate officia veniam quibusdam, earum m,
-                          earum perspiciatis natus optio incidunt porro ipsam
-                          possimus in hic nostrum modi corrupti itaque voluptas
-                          quidem impedit quos!
+                          {item.info}
                         </p>
                         <button className={styles.container__col2_button}>
                           Детальніше
