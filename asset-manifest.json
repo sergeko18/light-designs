@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/light-designs/static/css/main.99bba7d0.css",
-    "main.js": "/light-designs/static/js/main.21b7420e.js",
+    "main.css": "/light-designs/static/css/main.1ced55c6.css",
+    "main.js": "/light-designs/static/js/main.db059522.js",
     "static/js/787.f1b5d1a2.chunk.js": "/light-designs/static/js/787.f1b5d1a2.chunk.js",
     "static/media/Montserrat-VariableFont_wght.ttf": "/light-designs/static/media/Montserrat-VariableFont_wght.c28a96c369871653b853.ttf",
     "static/media/image1.jpg": "/light-designs/static/media/image1.27f9b9dc9522fd7e374f.jpg",
@@ -20,12 +20,12 @@
     "static/media/phone.svg": "/light-designs/static/media/phone.2d7032d0b1df293fb35d1f9582d2ecfe.svg",
     "index.html": "/light-designs/index.html",
     "static/media/fb.svg": "/light-designs/static/media/fb.8b7c66430913bc6760b178f9e6f9418b.svg",
-    "main.99bba7d0.css.map": "/light-designs/static/css/main.99bba7d0.css.map",
-    "main.21b7420e.js.map": "/light-designs/static/js/main.21b7420e.js.map",
+    "main.1ced55c6.css.map": "/light-designs/static/css/main.1ced55c6.css.map",
+    "main.db059522.js.map": "/light-designs/static/js/main.db059522.js.map",
     "787.f1b5d1a2.chunk.js.map": "/light-designs/static/js/787.f1b5d1a2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.99bba7d0.css",
-    "static/js/main.21b7420e.js"
+    "static/css/main.1ced55c6.css",
+    "static/js/main.db059522.js"
   ]
 }
