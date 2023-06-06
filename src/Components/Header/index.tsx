@@ -3,12 +3,32 @@ import styles from "./Header.module.css";
 import logo from "../../assets/img/logo/logo.svg";
 import ProductMenu from "./ProductMenu";
 import { Link } from "react-router-dom";
+import ApplicationsMenu from "./ApplicationsMenu";
 
 type HeaderPropsType = { windowWidth: number; setSubcategoryName: Function };
 
 const Header = ({ windowWidth, setSubcategoryName }: HeaderPropsType) => {
   const [isActive, setIsActive] = React.useState(false);
   const [isProductMenuActive, setIsProductMenuActive] = React.useState(false);
+  const [isApplicationsMenuActive, setIsApplicationsMenuActive] =
+    React.useState(false);
+
+  const popspateOnClick = () => {
+    if (isProductMenuActive) {
+      setIsProductMenuActive(false);
+    }
+    if (isApplicationsMenuActive) {
+      setIsApplicationsMenuActive(false);
+    }
+    if (isActive) {
+      setIsActive(false);
+    }
+    if (document.body.classList.contains("_lock")) {
+      document.body.classList.remove("_lock");
+    }
+  };
+
+  window.addEventListener("popstate", popspateOnClick);
 
   const handleClick = () => {
     setIsActive(!isActive);
@@ -19,6 +39,9 @@ const Header = ({ windowWidth, setSubcategoryName }: HeaderPropsType) => {
     }
     if (isProductMenuActive) {
       setIsProductMenuActive(false);
+    }
+    if (isApplicationsMenuActive) {
+      setIsApplicationsMenuActive(false);
     }
   };
 
@@ -32,6 +55,24 @@ const Header = ({ windowWidth, setSubcategoryName }: HeaderPropsType) => {
     }
     setIsProductMenuActive(!isProductMenuActive);
     setIsActive(false);
+    if (isApplicationsMenuActive) {
+      setIsApplicationsMenuActive(false);
+    }
+  };
+
+  const handleApplicationsClick = () => {
+    if (windowWidth > 767) {
+      if (document.body.classList.contains("_lock")) {
+        document.body.classList.remove("_lock");
+      } else {
+        document.body.classList.add("_lock");
+      }
+    }
+    setIsApplicationsMenuActive(!isApplicationsMenuActive);
+    setIsActive(false);
+    if (isProductMenuActive) {
+      setIsProductMenuActive(false);
+    }
   };
 
   const handleLogoClick = () => {
@@ -39,6 +80,7 @@ const Header = ({ windowWidth, setSubcategoryName }: HeaderPropsType) => {
       document.body.classList.remove("_lock");
     }
     setIsProductMenuActive(false);
+    setIsApplicationsMenuActive(false);
     setIsActive(false);
   };
 
@@ -69,7 +111,12 @@ const Header = ({ windowWidth, setSubcategoryName }: HeaderPropsType) => {
                 </span>
               </li>
               <li>
-                <span className={styles.menu__link}>ЗАСТОСУВАННЯ</span>
+                <span
+                  className={styles.menu__link}
+                  onClick={handleApplicationsClick}
+                >
+                  ЗАСТОСУВАННЯ
+                </span>
               </li>
               <li>
                 <span className={styles.menu__link}>ПЕРЕВАГИ</span>
@@ -81,6 +128,11 @@ const Header = ({ windowWidth, setSubcategoryName }: HeaderPropsType) => {
       <ProductMenu
         onHandleClick={handleLogoClick}
         isActive={isProductMenuActive}
+        setSubcategoryName={setSubcategoryName}
+      />
+      <ApplicationsMenu
+        isActive={isApplicationsMenuActive}
+        onHandleClick={handleLogoClick}
         setSubcategoryName={setSubcategoryName}
       />
     </header>

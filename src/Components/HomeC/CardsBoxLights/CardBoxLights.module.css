@@ -1,6 +1,11 @@
 .wrapper {
     margin-top: 70px;
     padding-bottom: 120px;
+    
+}
+.Link{
+    text-decoration: none;
+
 }
 
 .title {
@@ -8,8 +13,6 @@
     color: #F7941D;
     font-size: 18px;
     font-weight: 700;
-    
-    
 }
 
 .title:hover  {
@@ -24,11 +27,16 @@
 }
 
 .images {
-    transition: transform 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
    
-  }
+}
   
 .images:hover {
     transform: scale(1.2);
     cursor: pointer;
-  }
+}
+
+.text{
+    color: black;
+}
+

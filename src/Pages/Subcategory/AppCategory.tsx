@@ -1,24 +1,22 @@
 import React from "react";
 import styles from "./Subcategory.module.css";
 import { Col, Row } from "react-bootstrap";
+import image1 from "../../assets/img/subcategory/CLM60Series.png";
 import Divider from "../../Components/Divider";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import { ActiveCategoryType } from "../../App";
 import { Link } from "react-router-dom";
 
-type SubcategoryPropsTypes = {
-  ActiveCategory: ActiveCategoryType;
-  subcategoryName: string;
-};
-
-const Subcategory: React.FC<SubcategoryPropsTypes> = (props) => {
+const AppCategory = (props: any) => {
   window.scrollTo(0, 0);
+  const navigate = useNavigate();
+
   const [products, setProducts] = React.useState<
     [
       {
         id: string;
         category_ids: number[];
+        appCategory_ids: number[];
         name: string;
         imageURL: string;
         info: string;
@@ -28,15 +26,12 @@ const Subcategory: React.FC<SubcategoryPropsTypes> = (props) => {
     {
       id: "0",
       category_ids: [],
+      appCategory_ids: [],
       name: "Loading",
       imageURL: "",
       info: "",
     },
   ]);
-
-  const navigate = useNavigate();
-
-  let { id } = useParams();
 
   React.useEffect(() => {
     async function fetchCategory() {
@@ -53,6 +48,8 @@ const Subcategory: React.FC<SubcategoryPropsTypes> = (props) => {
     fetchCategory();
   }, []);
 
+  let { id } = useParams();
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
@@ -60,7 +57,7 @@ const Subcategory: React.FC<SubcategoryPropsTypes> = (props) => {
       </div>
 
       {products.map((item) => {
-        return item.category_ids.map((category_id) => {
+        return item.appCategory_ids.map((category_id) => {
           if (String(category_id) === String(id)) {
             return (
               <div className={styles.container} key={item.id}>
@@ -104,4 +101,4 @@ const Subcategory: React.FC<SubcategoryPropsTypes> = (props) => {
   );
 };
 
-export default Subcategory;
+export default AppCategory;

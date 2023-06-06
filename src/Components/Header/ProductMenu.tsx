@@ -47,9 +47,16 @@ const ProductMenu = ({ isActive, onHandleClick, setSubcategoryName }: any) => {
                         if (item.category_ids[i] === Number(subcategories.id)) {
                           return (
                             <div key={item.id}>
-                              <a className={styles.subprod__link} href="/">
+                              <Link
+                                className={styles.subprod__link}
+                                to={`/itemspage/${item.id}`}
+                                onClick={() => {
+                                  onHandleClick();
+                                  setSubcategoryName(subcategories.name);
+                                }}
+                              >
                                 {item.name}
-                              </a>
+                              </Link>
                             </div>
                           );
                         }

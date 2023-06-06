@@ -1,0 +1,54 @@
+.wrapper {
+    padding-top: 133px;
+    margin: 0 auto;
+}
+
+.container {
+    
+    max-width: 1320px;
+    min-height: 300px;
+    margin: 0 auto;
+    padding: 30px 30px;
+}
+
+.carousel__col {
+    
+    max-width: 670px;
+}
+
+.info__col_title {
+    font-weight: 700;
+    font-size: 24px;
+    color: rgb(75, 75, 75);
+    padding-bottom: 20px;
+}
+.info__col_text{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.info__col_infoUl {
+    padding-bottom: 20px;
+}
+
+.info__col_applicationsTitle {
+    font-weight: 700;
+    font-size: 18px;
+    color: rgb(75, 75, 75);
+}
+
+.info__col_infoUl {
+    list-style-type: none;
+    padding-left: 0; 
+}
+  
+.info__col_infoUl li:before {
+    content: "\2022"; 
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.carousel__img{
+    max-width: 100%;
+    height: auto;
+}

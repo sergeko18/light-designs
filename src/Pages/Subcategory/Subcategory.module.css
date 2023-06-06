@@ -12,7 +12,7 @@
 
 .container__item {
     margin: 12px;
-    padding-bottom: 32px;
+    padding: 32px 0;
 }
 
 .container__col2 {
@@ -34,9 +34,15 @@
     min-height: 50px;
     background-color: #f7941d;
     border: #f7941d;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .container__col2_button:hover {
+    color: #fff;
     background-color: #0a466f;
 }
 
@@ -54,7 +60,6 @@
     padding: 10px;
     color: #fff;
     background-color: #f7941d;
-    margin-bottom: 72px;
 }
 
 

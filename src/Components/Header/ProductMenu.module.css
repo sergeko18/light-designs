@@ -42,9 +42,43 @@
 
 .subprod__row {
     padding: 12px;
-    
-    
-    
+}
+
+.applications__row {
+    padding: 12px 76px;
+}
+
+.applications__col {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    text-align: center;
+  
+}
+
+
+
+.applications__img{
+    transition: transform 0.3s ease-in-out;
+    padding-bottom: 12px;
+}
+
+
+.applications__img:hover{
+    transform: scale(1.1);
+}
+.applications__title:hover {
+    color: #fff;
+    font-weight: 500;
+    cursor: auto;
+}
+
+.applications__col_link {
+    text-decoration: none;
+    color: black;
+}
+.applications__col_link:hover {
+    color: #F7941D;
+    cursor: pointer;
 }
 
 
@@ -82,4 +116,5 @@
 .subprod__col_link {
     text-decoration: none;
 }
+
 

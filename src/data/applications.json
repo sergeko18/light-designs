@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "Небезпечна зона",
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/application/image20220328200334.png"
+  },
+  {
+    "id": "2",
+    "name": "Корозійна зона",
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/application/image20220328200549.png"
+  },
+  {
+    "id": "3",
+    "name": "Висока температура",
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/application/image20220506150109.png"
+  },
+  {
+    "id": "4",
+    "name": "Продукти харчування",
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/application/image20220328200435.png"
+  },
+  {
+    "id": "5",
+    "name": "Промислові та складські приміщення",
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/application/image20220328195026.png"
+  },
+  {
+    "id": "6",
+    "name": "Ферми та тваринництво",
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/application/image20220328200513.png"
+  },
+  {
+    "id": "7",
+    "name": "Спорт і відпочинок",
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/application/image20220328195142.png"
+  },
+  {
+    "id": "8",
+    "name": "Дороги та тунелі",
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/application/image20220328200236.png"
+  },
+  {
+    "id": "9",
+    "name": "Гаражі та парковки",
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/application/image20220426182730.png"
+  },
+  {
+    "id": "10",
+    "name": "Рекламні щити і вивіски",
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/application/image20220328195737.png"
+  },
+  {
+    "id": "11",
+    "name": "Заправки та навіси",
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/application/image20220328200153.png"
+  },
+  {
+    "id": "12",
+    "name": "Роздрібна торгівля та супермаркети",
+    "imageURL": "https://lightemittingdesigns.com/public/assets/img/application/image20220328195825.png"
+  }
+]

@@ -6,8 +6,10 @@ import faceBookIco from "../../assets/icons/fb.svg";
 import LinkedInIco from "../../assets/icons/LI.svg";
 import twitterIco from "../../assets/icons/twit.svg";
 import youtubeIco from "../../assets/icons/YT.svg";
+import { Link } from "react-router-dom";
+import applications from "../../data/applications.json";
 
-function Footer() {
+function Footer({ setSubcategoryName }: any) {
   return (
     <footer className={styles.wrapper}>
       <div className={styles.main}>
@@ -15,53 +17,32 @@ function Footer() {
           <Row>
             <Col className={styles.col}>
               <h6 className={styles.title}>Продукція</h6>
-              <div className={styles.link}>Внутрішнє освітлення</div>
-              <div className={styles.link}>Зовнішнє освітлення</div>
-              <div className={styles.link}>
-                Екстремальне застосування освітлення
-              </div>
+              <Link className={styles.Link} to={`/categories/1`}>
+                <div className={styles.link}>Внутрішнє освітлення</div>
+              </Link>
+              <Link className={styles.Link} to={`/categories/2`}>
+                <div className={styles.link}>Зовнішнє освітлення</div>
+              </Link>
+              <Link className={styles.Link} to={`/categories/3`}>
+                <div className={styles.link}>
+                  Освітлення в екстремальних умовах
+                </div>
+              </Link>
             </Col>
+
             <Col className={styles.col}>
               <h6 className={styles.title}>Застосування</h6>
-              <div className={styles.link}>Небезпечні зони</div>
-              <div className={styles.link}>Корозійні зони</div>
-              <div className={styles.link}>Висока температура</div>
-              <div className={styles.link}>
-                Харчова та напоєна промисловість
-              </div>
-              <div className={styles.link}>
-                Промислові та складські приміщення
-              </div>
-              <div className={styles.link}>Ферми та тваринництво</div>
-              <div className={styles.link}>Спорт та дозвілля</div>
-              <div className={styles.link}>Дороги та тунелі</div>
-              <div className={styles.link}>Парковки</div>
-              <div className={styles.link}>Білборди та знаки</div>
-              <div className={styles.link}>АЗС та навіси</div>
-              <div className={styles.link}>
-                Роздрібна та супермаркетна торгівля
-              </div>
-            </Col>
-            <Col className={styles.col}>
-              <h6 className={styles.title}>Застосування</h6>
-              <div className={styles.link}>Небезпечні зони</div>
-              <div className={styles.link}>Корозійні зони</div>
-              <div className={styles.link}>Висока температура</div>
-              <div className={styles.link}>
-                Харчова та напоєна промисловість
-              </div>
-              <div className={styles.link}>
-                Промислові та складські приміщення
-              </div>
-              <div className={styles.link}>Ферми та тваринництво</div>
-              <div className={styles.link}>Спорт та дозвілля</div>
-              <div className={styles.link}>Дороги та тунелі</div>
-              <div className={styles.link}>Парковки</div>
-              <div className={styles.link}>Білборди та знаки</div>
-              <div className={styles.link}>АЗС та навіси</div>
-              <div className={styles.link}>
-                Роздрібна та супермаркетна торгівля
-              </div>
+              {applications.map((item) => (
+                <Link
+                  className={styles.applications__link}
+                  to={`/appcategory/${item.id}`}
+                  onClick={() => {
+                    setSubcategoryName(item.name);
+                  }}
+                >
+                  <div className={styles.link}>{item.name}</div>
+                </Link>
+              ))}
             </Col>
             <Col className={styles.col}>
               <h6 className={styles.title}>Зверніться до наших експертів</h6>

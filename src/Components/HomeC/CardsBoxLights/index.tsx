@@ -4,24 +4,25 @@ import img1 from "../../../assets/img/cardsLights/imageCL1.jpg";
 import img2 from "../../../assets/img/cardsLights/imageCL2.jpg";
 import img3 from "../../../assets/img/cardsLights/imageCL3.jpg";
 import styles from "./CardBoxLights.module.css";
+import { Link } from "react-router-dom";
 
 const CardsBoxLightsData = [
   {
-    id: 1,
+    id: 4,
     img: img1,
     title: "IL280 Series",
     subtitle:
       "Серія IL280 - це ультракомпактне, високогустотне промислове світло з LED, розроблене для заміни традиційних фіксаторів HID до 250 Вт.",
   },
   {
-    id: 2,
+    id: 7,
     img: img2,
     title: "RWBE40 Series",
     subtitle:
       "RWB E40 - це LED-лампочка стандарту E40 для вуличного освітлення, яка містить передову технологію та спеціально розроблена для заміни застарілих ламп",
   },
   {
-    id: 3,
+    id: 10,
     img: img3,
     title: "RWL600 Series",
     subtitle:
@@ -36,22 +37,26 @@ function CardsBoxLights() {
         {CardsBoxLightsData.map((card) => {
           return (
             <Col key={card.id}>
-              <Card
-                className={styles.card}
-                style={{ width: "20rem", border: "none" }}
-              >
-                <Card.Img
-                  className={styles.images}
-                  variant="top"
-                  src={card.img}
-                />
-                <Card.Body className="text-center">
-                  <Card.Title>
-                    <h6 className={styles.title}>{card.title}</h6>
-                  </Card.Title>
-                  <Card.Text>{card.subtitle}</Card.Text>
-                </Card.Body>
-              </Card>
+              <Link className={styles.Link} to={`/itemspage/${card.id}`}>
+                <Card
+                  className={styles.card}
+                  style={{ width: "20rem", border: "none" }}
+                >
+                  <Card.Img
+                    className={styles.images}
+                    variant="top"
+                    src={card.img}
+                  />
+                  <Card.Body className="text-center">
+                    <Card.Title>
+                      <h6 className={styles.title}>{card.title}</h6>
+                    </Card.Title>
+                    <Card.Text className={styles.text}>
+                      {card.subtitle}
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Link>
             </Col>
           );
         })}

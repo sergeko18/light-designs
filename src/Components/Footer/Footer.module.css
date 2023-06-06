@@ -81,3 +81,13 @@
 .phoneLink:hover {
     color: #0a466f !important;
 }
+
+.Link {
+    text-decoration: none;
+    color: white;
+}
+
+.applications__link {
+    text-decoration: none;
+    color: white;
+}

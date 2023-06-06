@@ -7,6 +7,8 @@ import Categories from "./Pages/Categories";
 import Subcategory from "./Pages/Subcategory";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./Pages/NotFound";
+import ItemsPage from "./Pages/ItemsPage";
+import AppCategory from "./Pages/Subcategory/AppCategory";
 
 export type ActiveCategoryType = {
   id: string;
@@ -57,9 +59,19 @@ function App() {
             />
           }
         />
+        <Route
+          path="/appcategory/:id"
+          element={
+            <AppCategory
+              ActiveCategory={ActiveCategory}
+              subcategoryName={subcategoryName}
+            />
+          }
+        />
+        <Route path="/itemspage/:id" element={<ItemsPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
+      <Footer setSubcategoryName={(name: string) => setSubcategoryName(name)} />
     </div>
   );
 }
