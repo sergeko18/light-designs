@@ -39,6 +39,7 @@ function Footer({ setSubcategoryName }: any) {
                   onClick={() => {
                     setSubcategoryName(item.name);
                   }}
+                  key={item.id}
                 >
                   <div className={styles.link}>{item.name}</div>
                 </Link>

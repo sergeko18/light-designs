@@ -35,10 +35,8 @@ const ProductMenu = ({ isActive, onHandleClick, setSubcategoryName }: any) => {
                         setSubcategoryName(subcategories.name);
                       }}
                     >
-                      <h3>
-                        <a className={styles.subprod__subtitle} href="/">
-                          {subcategories.name}
-                        </a>
+                      <h3 className={styles.subprod__subtitle}>
+                        {subcategories.name}
                       </h3>
                     </Link>
 

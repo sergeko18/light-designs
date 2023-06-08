@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Subcategory.module.css";
 import { Col, Row } from "react-bootstrap";
-import image1 from "../../assets/img/subcategory/CLM60Series.png";
 import Divider from "../../Components/Divider";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import applications from "../../data/applications.json";
 
 const AppCategory = (props: any) => {
   window.scrollTo(0, 0);
@@ -50,10 +50,12 @@ const AppCategory = (props: any) => {
 
   let { id } = useParams();
 
+  const title: any = applications.find((obj) => obj.id === id);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
-        <h3 className={styles.title__text}>{props.subcategoryName}</h3>
+        <h3 className={styles.title__text}>{title.name}</h3>
       </div>
 
       {products.map((item) => {

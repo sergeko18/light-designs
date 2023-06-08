@@ -46,8 +46,8 @@ const ItemsPage = () => {
             <h6 className={styles.info__col_applicationsTitle}>Застосування</h6>
             <ul className={styles.info__col_infoUl}>
               {item
-                ? item.applicationsUL.map((infoUlLi: any) => {
-                    return <li>{infoUlLi}</li>;
+                ? item.applicationsUL.map((infoUlLi: any, i: any) => {
+                    return <li key={i}>{infoUlLi}</li>;
                   })
                 : ""}
             </ul>
