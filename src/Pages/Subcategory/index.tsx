@@ -4,16 +4,10 @@ import { Col, Row } from "react-bootstrap";
 import Divider from "../../Components/Divider";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import { ActiveCategoryType } from "../../App";
 import { Link } from "react-router-dom";
 import subcategories from "../../data/subcategories.json";
 
-type SubcategoryPropsTypes = {
-  ActiveCategory: ActiveCategoryType;
-  subcategoryName: string;
-};
-
-const Subcategory: React.FC<SubcategoryPropsTypes> = (props) => {
+const Subcategory = () => {
   window.scrollTo(0, 0);
   const [products, setProducts] = React.useState<
     [
@@ -54,12 +48,16 @@ const Subcategory: React.FC<SubcategoryPropsTypes> = (props) => {
     fetchCategory();
   }, []);
 
-  const title: any = subcategories.find((obj) => obj.id === id);
+  const subcategory: { name: string } | undefined = subcategories.find(
+    (obj) => obj.id === id
+  );
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
-        <h3 className={styles.title__text}>{title.name}</h3>
+        <h3 className={styles.title__text}>
+          {subcategory ? subcategory.name : "Loading"}
+        </h3>
       </div>
 
       {products.map((item) => {

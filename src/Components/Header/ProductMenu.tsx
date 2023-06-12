@@ -3,9 +3,10 @@ import styles from "./ProductMenu.module.css";
 import { Col, Row } from "react-bootstrap";
 import categories from "../../data/categories.json";
 import products from "../../data/products.json";
+import subcategories from "../../data/subcategories.json";
 import { Link } from "react-router-dom";
 
-const ProductMenu = ({ isActive, onHandleClick, setSubcategoryName }: any) => {
+const ProductMenu = ({ isActive, onHandleClick }: any) => {
   return (
     <div
       className={`${styles.subprod__body} ${
@@ -24,45 +25,47 @@ const ProductMenu = ({ isActive, onHandleClick, setSubcategoryName }: any) => {
               </Link>
             </div>
             <Row className={styles.subprod__row}>
-              {menu.subcategories.map((subcategories) => {
-                return (
-                  <Col key={subcategories.id} className={styles.subprod__col}>
-                    <Link
-                      className={styles.subprod__col_link}
-                      to={`/subcategory/${subcategories.id}`}
-                      onClick={() => {
-                        onHandleClick();
-                        setSubcategoryName(subcategories.name);
-                      }}
-                    >
-                      <h3 className={styles.subprod__subtitle}>
-                        {subcategories.name}
-                      </h3>
-                    </Link>
+              {subcategories.map((subcategories) => {
+                if (menu.id === subcategories.categoryId) {
+                  return (
+                    <Col key={subcategories.id} className={styles.subprod__col}>
+                      <Link
+                        className={styles.subprod__col_link}
+                        to={`/subcategory/${subcategories.id}`}
+                        onClick={() => {
+                          onHandleClick();
+                        }}
+                      >
+                        <h3 className={styles.subprod__subtitle}>
+                          {subcategories.name}
+                        </h3>
+                      </Link>
 
-                    {products.map((item) => {
-                      for (let i = 0; i < item.category_ids.length; i++) {
-                        if (item.category_ids[i] === Number(subcategories.id)) {
-                          return (
-                            <div key={item.id}>
-                              <Link
-                                className={styles.subprod__link}
-                                to={`/itemspage/${item.id}`}
-                                onClick={() => {
-                                  onHandleClick();
-                                  setSubcategoryName(subcategories.name);
-                                }}
-                              >
-                                {item.name}
-                              </Link>
-                            </div>
-                          );
+                      {products.map((item) => {
+                        for (let i = 0; i < item.category_ids.length; i++) {
+                          if (
+                            item.category_ids[i] === Number(subcategories.id)
+                          ) {
+                            return (
+                              <div key={item.id}>
+                                <Link
+                                  className={styles.subprod__link}
+                                  to={`/itemspage/${item.id}`}
+                                  onClick={() => {
+                                    onHandleClick();
+                                  }}
+                                >
+                                  {item.name}
+                                </Link>
+                              </div>
+                            );
+                          }
                         }
-                      }
-                      return null;
-                    })}
-                  </Col>
-                );
+                        return null;
+                      })}
+                    </Col>
+                  );
+                }
               })}
             </Row>
           </div>

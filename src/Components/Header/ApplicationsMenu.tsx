@@ -4,11 +4,15 @@ import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import applications from "../../data/applications.json";
 
-const ApplicationsMenu = ({
+type ApplicationsMenuPropsType = {
+  isActive: boolean;
+  onHandleClick: () => void;
+};
+
+const ApplicationsMenu: React.FC<ApplicationsMenuPropsType> = ({
   isActive,
   onHandleClick,
-  setSubcategoryName,
-}: any) => {
+}) => {
   return (
     <div
       className={`${styles.subprod__body} ${
@@ -31,7 +35,6 @@ const ApplicationsMenu = ({
                 to={`/appcategory/${item.id}`}
                 onClick={() => {
                   onHandleClick();
-                  setSubcategoryName(item.name);
                 }}
               >
                 <img

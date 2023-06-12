@@ -5,13 +5,15 @@ import ProductMenu from "./ProductMenu";
 import { Link } from "react-router-dom";
 import ApplicationsMenu from "./ApplicationsMenu";
 
-type HeaderPropsType = { windowWidth: number; setSubcategoryName: Function };
+type HeaderPropsType = { windowWidth: number };
 
-const Header = ({ windowWidth, setSubcategoryName }: HeaderPropsType) => {
+const Header = ({ windowWidth }: HeaderPropsType) => {
   const [isActive, setIsActive] = React.useState(false);
   const [isProductMenuActive, setIsProductMenuActive] = React.useState(false);
   const [isApplicationsMenuActive, setIsApplicationsMenuActive] =
     React.useState(false);
+
+  React.useEffect(() => {});
 
   const popspateOnClick = () => {
     if (isProductMenuActive) {
@@ -128,12 +130,10 @@ const Header = ({ windowWidth, setSubcategoryName }: HeaderPropsType) => {
       <ProductMenu
         onHandleClick={handleLogoClick}
         isActive={isProductMenuActive}
-        setSubcategoryName={setSubcategoryName}
       />
       <ApplicationsMenu
         isActive={isApplicationsMenuActive}
         onHandleClick={handleLogoClick}
-        setSubcategoryName={setSubcategoryName}
       />
     </header>
   );

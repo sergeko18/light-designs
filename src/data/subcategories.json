@@ -1,93 +1,111 @@
 [
   {
     "id": "11",
+    "categoryId": "1",
     "name": "Трофери/Офісні світильники",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131452.png"
   },
   {
     "id": "12",
+    "categoryId": "1",
     "name": "Модернізація високоих/низьких приміщень",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131539.png"
   },
   {
     "id": "13",
+    "categoryId": "1",
     "name": "Промислове/Висотне освітлення",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131554.png"
   },
   {
     "id": "14",
+    "categoryId": "1",
     "name": "Лінійне освітлення",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612131613.png"
   },
 
   {
     "id": "21",
+    "categoryId": "2",
     "name": "Flood",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612135636.png"
   },
   {
     "id": "22",
+    "categoryId": "2",
     "name": "Паркінгова структура",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612135746.png"
   },
   {
     "id": "23",
+    "categoryId": "2",
     "name": "Проїжджа частина",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612135823.png"
   },
   {
     "id": "24",
+    "categoryId": "2",
     "name": "Місце/Ділянка",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612135916.png"
   },
   {
     "id": "25",
+    "categoryId": "2",
     "name": "Козирок/Софіт",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612135950.png"
   },
   {
     "id": "26",
+    "categoryId": "2",
     "name": "Білборди/Вивіски",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612141451.png"
   },
   {
     "id": "27",
+    "categoryId": "2",
     "name": "Тунель",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612142059.png"
   },
   {
     "id": "28",
+    "categoryId": "2",
     "name": "Кріплення на стіну",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612142145.png"
   },
   {
     "id": "29",
+    "categoryId": "2",
     "name": "Високомачтові",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20221001190147.png"
   },
   {
     "id": "210",
+    "categoryId": "2",
     "name": "Стадіон/Спортивний Майданчик",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20221001190215.png"
   },
 
   {
     "id": "31",
+    "categoryId": "3",
     "name": "Небезпечна зона",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612142304.png"
   },
   {
     "id": "32",
+    "categoryId": "3",
     "name": "Харчова промисловість",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612142317.png"
   },
   {
     "id": "33",
+    "categoryId": "3",
     "name": "Високі температури",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612142339.png"
   },
   {
     "id": "34",
+    "categoryId": "2",
     "name": "Карозійні/Морські",
     "imageURL": "https://lightemittingdesigns.com/public/assets/img/product_sub_category/image20220612142352.png"
   }

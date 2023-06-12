@@ -10,7 +10,6 @@ import { ActiveCategoryType } from "../../App";
 type propsCategoriesTypes = {
   ActiveCategory: ActiveCategoryType;
   setActiveCategory: Function;
-  setSubcategoryName: Function;
 };
 
 const Categories: React.FC<propsCategoriesTypes> = (props) => {
@@ -45,7 +44,6 @@ const Categories: React.FC<propsCategoriesTypes> = (props) => {
             return (
               <Col key={item.id} className={styles.col}>
                 <Link
-                  onClick={() => props.setSubcategoryName(item.name)}
                   className={styles.col__link}
                   to={`/subcategory/${item.id}`}
                 >

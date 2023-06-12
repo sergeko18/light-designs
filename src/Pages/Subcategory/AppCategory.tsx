@@ -7,7 +7,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import applications from "../../data/applications.json";
 
-const AppCategory = (props: any) => {
+const AppCategory = () => {
   window.scrollTo(0, 0);
   const navigate = useNavigate();
 

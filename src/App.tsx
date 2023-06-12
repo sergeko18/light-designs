@@ -17,7 +17,6 @@ export type ActiveCategoryType = {
 };
 
 function App() {
-  const [subcategoryName, setSubcategoryName] = React.useState("");
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
   const [ActiveCategory, setActiveCategory] =
     React.useState<ActiveCategoryType>({
@@ -26,52 +25,32 @@ function App() {
       subcategories: [{ id: "Loading", name: "Loading", imageURL: "Loading" }],
     });
 
-  React.useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  // React.useEffect(() => {
+  //   const handleResize = () => setWindowWidth(window.innerWidth);
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   return (
     <div className="App">
-      <Header
-        windowWidth={windowWidth}
-        setSubcategoryName={setSubcategoryName}
-      />
+      <Header windowWidth={windowWidth} />
       <Routes>
         <Route path="/" element={<Home windowWidth={windowWidth} />} />
         <Route
           path="/categories/:id"
           element={
             <Categories
-              setSubcategoryName={(name: string) => setSubcategoryName(name)}
               ActiveCategory={ActiveCategory}
               setActiveCategory={setActiveCategory}
             />
           }
         />
-        <Route
-          path="/subcategory/:id"
-          element={
-            <Subcategory
-              ActiveCategory={ActiveCategory}
-              subcategoryName={subcategoryName}
-            />
-          }
-        />
-        <Route
-          path="/appcategory/:id"
-          element={
-            <AppCategory
-              ActiveCategory={ActiveCategory}
-              subcategoryName={subcategoryName}
-            />
-          }
-        />
+        <Route path="/subcategory/:id" element={<Subcategory />} />
+        <Route path="/appcategory/:id" element={<AppCategory />} />
         <Route path="/itemspage/:id" element={<ItemsPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer setSubcategoryName={(name: string) => setSubcategoryName(name)} />
+      <Footer />
     </div>
   );
 }

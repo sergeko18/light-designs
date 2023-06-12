@@ -9,7 +9,7 @@ import youtubeIco from "../../assets/icons/YT.svg";
 import { Link } from "react-router-dom";
 import applications from "../../data/applications.json";
 
-function Footer({ setSubcategoryName }: any) {
+function Footer() {
   return (
     <footer className={styles.wrapper}>
       <div className={styles.main}>
@@ -36,9 +36,6 @@ function Footer({ setSubcategoryName }: any) {
                 <Link
                   className={styles.applications__link}
                   to={`/appcategory/${item.id}`}
-                  onClick={() => {
-                    setSubcategoryName(item.name);
-                  }}
                   key={item.id}
                 >
                   <div className={styles.link}>{item.name}</div>
